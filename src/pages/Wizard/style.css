@@ -1,0 +1,36 @@
+.one-wizard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.one-wizard img{
+    width: 300px;
+    border: 6px solid #BDA03D;
+    padding: 5px;
+}
+
+.character{
+    font-size: 18px;
+}
+
+.info-wizard{
+    padding-left: 20px;
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+    background-color: #464F51;
+    padding: 10px 15px;
+    margin-left: 1040px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    color: #BDA03D;
+    font-weight: 600;
+    
+
+    
+
+}

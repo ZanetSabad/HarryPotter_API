@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import SharedLayout from "./pages/SharedLayout"
+import HomePage from "./pages/HomePage"
+import AllWizard from './pages/AllWizards'
+import Wizard from './pages/Wizard'
+import Error from './pages/Error'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <SharedLayout /> }>
+
+          <Route index element={ <HomePage /> } />          
+          <Route path="/allPokemon" element={ <AllWizard /> } />
+          <Route path="wizard/:id" element={ <Wizard />} /> 
+          <Route path="*" element={ <Error />} /> 
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
